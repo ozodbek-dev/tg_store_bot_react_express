@@ -3,11 +3,16 @@ import {useTelegram} from "./hooks/useTelegram";
 import Header from "./components/header";
 const tg = window.Telegram.WebApp
 const App = () => {
-    const {onToggleButton} = useTelegram()
     useEffect(() => {
        tg.ready()
     }, []);
-
+    const onToggleButton = ()=>{
+        if(tg.MainButton.isVisible){
+            tg.MainButton.show()
+        }else{
+            tg.MainButton.hide();
+        }
+    }
     return (
         <div className="app">
             <Header/>

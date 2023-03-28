@@ -4,12 +4,16 @@ import Button from "../button";
 import {useTelegram} from "../../hooks/useTelegram";
 
 const Header = () => {
-    const {onClose,user, tg}= useTelegram()
+  const tg = window.Telegram.WebApp;
+  const onClose = ()=>{
+      tg.close(0)
+  }
+
     return (
         <header>
             <Button onClick={onClose}>Yopish</Button>
             <span className={"username"}>
-                {user?.username}
+                {tg.initDataUnsave?.user?.username}
             </span>
         </header>
     );
