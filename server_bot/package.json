@@ -1,22 +1,20 @@
 {
-  "name": "server_bot",
+  "name": "tg-web-app-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "node-telegram-bot-api": "^0.61.0",
-    "telegraf": "^4.12.2"
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "node-telegram-bot-api": "^0.58.0"
   }
 }
