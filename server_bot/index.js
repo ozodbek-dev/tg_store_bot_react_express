@@ -5,6 +5,7 @@ import "dotenv/config"
 
 const token = process.env.TG_BOT_TOKEN;
 const webAppUrl = process.env.WEB_APP_URL;
+console.log(webAppUrl)
 
 const bot = new TelegramBot(token, {polling: true});
 const app = express();
