@@ -1,7 +1,7 @@
-import TelegramBot  from'node-telegram-bot-api';
+import TelegramBot  from 'node-telegram-bot-api';
 import express from 'express'
-
 import cors from 'cors'
+import "dotenv/config"
 
 const token = process.env.TG_BOT_TOKEN;
 const webAppUrl = process.env.WEB_APP_URL;
